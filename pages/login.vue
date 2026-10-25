@@ -29,11 +29,24 @@ const isLocalDemo = computed(() => {
 });
 
 const demoAccounts = [
-  { role: 'Pathologist', email: 'pathologist@histo.ng', password: 'Pathologist#2026' },
+  { role: 'Histopathology', email: 'pathologist@histo.ng', password: 'Pathologist#2026' },
+  { role: 'Clinical chemistry', email: 'chemistry@histo.ng', password: 'Chemistry#2026' },
+  { role: 'Haematology', email: 'haematology@histo.ng', password: 'Haematology#2026' },
+  { role: 'Microbiology', email: 'microbiology@histo.ng', password: 'Microbiology#2026' },
   { role: 'Technologist', email: 'technologist@histo.ng', password: 'Technologist#2026' },
   { role: 'Reception', email: 'reception@histo.ng', password: 'Reception#2026' },
   { role: 'Lab admin', email: 'admin@histo.ng', password: 'LabAdmin#2026' },
+  { role: 'Super admin', email: 'superadmin@histo.ng', password: 'SuperAdmin#2026' },
 ];
+
+onMounted(() => {
+  const demo = route.query.demo;
+  if (typeof demo !== 'string') return;
+  const account = demoAccounts.find(
+    (item) => item.email === demo || item.role.toLowerCase().replace(/\s+/g, '-') === demo,
+  );
+  if (account) useDemo(account);
+});
 
 function clearErrors(): void {
   formError.value = null;

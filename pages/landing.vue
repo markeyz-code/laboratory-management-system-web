@@ -994,22 +994,22 @@ const departmentDemoAccounts = [
   {
     discipline: 'Clinical Chemistry',
     subtitle: 'Analytes, reference ranges, autoverification and critical alerts',
-    email: 'scientist@histo.ng',
-    password: 'Scientist#2026',
+    email: 'chemistry@histo.ng',
+    password: 'Chemistry#2026',
     icon: 'beaker',
   },
   {
     discipline: 'Haematology',
     subtitle: 'FBC, coagulation, morphology and Westgard QC',
-    email: 'scientist@histo.ng',
-    password: 'Scientist#2026',
+    email: 'haematology@histo.ng',
+    password: 'Haematology#2026',
     icon: 'flask',
   },
   {
     discipline: 'Medical Microbiology',
     subtitle: 'Culture lifecycle, organism ID and AST breakpoints',
-    email: 'pathologist2@histo.ng',
-    password: 'Pathologist#2026',
+    email: 'microbiology@histo.ng',
+    password: 'Microbiology#2026',
     icon: 'shield',
   },
 ];
@@ -1036,19 +1036,27 @@ const demoPersonas = [
     icon: 'microscope',
   },
   {
-    role: 'Medical Lab Scientist (MLS)',
-    name: 'Folake Okon (Senior MLS · Chemistry & Haem)',
-    email: 'scientist@histo.ng',
-    password: 'Scientist#2026',
+    role: 'Clinical Chemistry Scientist',
+    name: 'Dr. Kunle Adeyemi (Chemical Pathology)',
+    email: 'chemistry@histo.ng',
+    password: 'Chemistry#2026',
     tasks:
-      'Enter chemistry/haematology results, trigger autoverification rules, acknowledge critical values.',
+      'Enter chemistry results, review reference ranges and critical limits, trigger autoverification rules.',
     icon: 'beaker',
+  },
+  {
+    role: 'Haematology Scientist',
+    name: 'Dr. Ngozi Eze (Haematology)',
+    email: 'haematology@histo.ng',
+    password: 'Haematology#2026',
+    tasks: 'Enter FBC and coagulation results, review morphology and Westgard QC.',
+    icon: 'flask',
   },
   {
     role: 'Microbiology Scientist',
     name: 'Dr. Ada Nwosu (Medical Microbiology)',
-    email: 'pathologist2@histo.ng',
-    password: 'Pathologist#2026',
+    email: 'microbiology@histo.ng',
+    password: 'Microbiology#2026',
     tasks:
       'Culture bench, organism identification, CLSI/EUCAST AST, resistance flags and antibiogram review.',
     icon: 'shield',
@@ -1125,7 +1133,10 @@ const faqs = [
 </script>
 
 <template>
-  <div id="main-content" class="min-h-screen w-full max-w-full overflow-x-clip bg-canvas text-ink selection:bg-accent/20">
+  <div
+    id="main-content"
+    class="min-h-screen w-full max-w-full overflow-x-clip bg-canvas text-ink selection:bg-accent/20"
+  >
     <!-- Top Clinical Telemetry & Accreditation Ribbon -->
     <div
       class="hidden border-b border-rail-line/70 bg-rail px-4 py-1.5 font-mono text-[11px] text-rail-muted sm:block w-full max-w-full overflow-hidden"
@@ -1167,7 +1178,7 @@ const faqs = [
           >
             <AppIcon name="users" size="12" class="text-accent" />
             <span class="font-semibold">Interactive Roles</span>
-            <span class="hidden md:inline text-rail-muted text-[10px]">(6 Personas)</span>
+            <span class="hidden md:inline text-rail-muted text-[10px]">(7 Personas)</span>
             <span class="text-[10px] transition-transform group-hover:translate-x-0.5">→</span>
           </button>
         </div>
@@ -1361,7 +1372,7 @@ const faqs = [
                 >
                   <span class="flex items-center gap-1.5 font-semibold">
                     <AppIcon name="users" size="13" />
-                    <span>Try 6 Instant Demo Roles</span>
+                    <span>Try 7 Instant Demo Roles</span>
                   </span>
                   <span class="text-xs">→</span>
                 </button>
@@ -1511,7 +1522,7 @@ const faqs = [
               >
                 <span class="flex items-center gap-2 font-semibold uppercase tracking-wider">
                   <AppIcon name="users" size="14" />
-                  <span>Launch 6 Live Demo Personas</span>
+                  <span>Launch 7 Live Demo Personas</span>
                 </span>
                 <span>→</span>
               </button>
@@ -1559,7 +1570,9 @@ const faqs = [
               <span class="xs:hidden">Enterprise Medical LIMS</span>
             </div>
 
-            <h1 class="display mt-6 text-3xl sm:text-5xl lg:text-6xl tracking-tight text-ink break-words">
+            <h1
+              class="display mt-6 text-3xl sm:text-5xl lg:text-6xl tracking-tight text-ink break-words"
+            >
               One Unified System.<br />
               All Laboratory Departments.<br />
               <span class="text-accent">Zero Diagnostic Compromise.</span>
@@ -1594,7 +1607,9 @@ const faqs = [
             </div>
 
             <!-- CTA Actions -->
-            <div class="mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
+            <div
+              class="mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4"
+            >
               <button
                 type="button"
                 class="flex items-center justify-center gap-2.5 bg-accent px-4 sm:px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-accent-ink shadow-lift transition hover:bg-accent/90 text-center"
@@ -1645,7 +1660,9 @@ const faqs = [
                   <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-red-500/80" />
                   <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-amber-500/80" />
                   <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500/80" />
-                  <span class="ml-1 sm:ml-2 font-mono text-2xs uppercase tracking-caps text-rail-muted truncate">
+                  <span
+                    class="ml-1 sm:ml-2 font-mono text-2xs uppercase tracking-caps text-rail-muted truncate"
+                  >
                     Hospital Central Laboratory Console
                   </span>
                 </div>
@@ -1658,7 +1675,9 @@ const faqs = [
               <!-- Multi-Department Real-Time Telemetry -->
               <div class="p-4 sm:p-6 space-y-4 font-mono text-xs overflow-hidden">
                 <!-- Patient Encounter Header -->
-                <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-rail-line pb-3">
+                <div
+                  class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 border-b border-rail-line pb-3"
+                >
                   <div class="min-w-0">
                     <span class="text-2xs uppercase tracking-caps text-accent"
                       >Encounter: EN-2026-000482</span
@@ -1698,7 +1717,9 @@ const faqs = [
                     >
                     <span class="text-2xs uppercase text-sky-400 shrink-0">AUTOVERIFIED</span>
                   </div>
-                  <div class="flex flex-wrap justify-between gap-x-2 gap-y-0.5 text-2xs text-rail-muted mt-1">
+                  <div
+                    class="flex flex-wrap justify-between gap-x-2 gap-y-0.5 text-2xs text-rail-muted mt-1"
+                  >
                     <span>Creatinine: 78 μmol/L (Norm)</span>
                     <span class="text-amber-400">Alk Phos: 168 U/L (Elevated ↑)</span>
                   </div>
@@ -1712,7 +1733,9 @@ const faqs = [
                     >
                     <span class="text-2xs uppercase text-emerald-400 shrink-0">RELEASED</span>
                   </div>
-                  <div class="flex flex-wrap justify-between gap-x-2 gap-y-0.5 text-2xs text-rail-muted mt-1">
+                  <div
+                    class="flex flex-wrap justify-between gap-x-2 gap-y-0.5 text-2xs text-rail-muted mt-1"
+                  >
                     <span>Hb: 11.8 g/dL</span>
                     <span>WBC: 6.4 × 10⁹/L</span>
                     <span>Platelets: 245 × 10⁹/L</span>
@@ -1725,7 +1748,9 @@ const faqs = [
                     <span class="text-emerald-400 font-semibold break-words"
                       >MICROBIOLOGY: Blood Culture &amp; AST</span
                     >
-                    <span class="text-2xs uppercase text-emerald-400 shrink-0">NO GROWTH (48H)</span>
+                    <span class="text-2xs uppercase text-emerald-400 shrink-0"
+                      >NO GROWTH (48H)</span
+                    >
                   </div>
                   <span class="text-2xs text-rail-muted block mt-1 break-words"
                     >Automated incubation chamber log verified</span
@@ -1927,7 +1952,10 @@ const faqs = [
 
     <!-- INTERACTIVE 7-STATION SPECIMEN JOURNEY SIMULATOR -->
     <!-- INTERACTIVE MULTI-DISCIPLINE SPECIMEN JOURNEY & BENCHTOP SIMULATOR -->
-    <section id="custody" class="scroll-mt-20 border-b border-line bg-surface py-16 lg:py-24 w-full max-w-full overflow-hidden">
+    <section
+      id="custody"
+      class="scroll-mt-20 border-b border-line bg-surface py-16 lg:py-24 w-full max-w-full overflow-hidden"
+    >
       <div class="mx-auto max-w-shell px-4 sm:px-6 lg:px-8 w-full max-w-full min-w-0">
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto">
@@ -2195,7 +2223,9 @@ const faqs = [
                 class="mt-6 rounded-lg border border-line bg-canvas p-4 font-mono text-xs shadow-xs"
               >
                 <!-- Barcode Payload & Scan Status -->
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-line/60 pb-3">
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-line/60 pb-3"
+                >
                   <div class="flex items-center gap-2 min-w-0 flex-wrap">
                     <span class="text-muted uppercase tracking-caps text-2xs shrink-0"
                       >Barcode Payload:</span
@@ -2282,7 +2312,9 @@ const faqs = [
                     <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-red-500/80" />
                     <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-amber-500/80" />
                     <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500/80" />
-                    <span class="ml-2 font-semibold text-rail-ink truncate">Actual Software Interface</span>
+                    <span class="ml-2 font-semibold text-rail-ink truncate"
+                      >Actual Software Interface</span
+                    >
                   </div>
                   <span class="text-accent font-semibold shrink-0">{{
                     activeStation.id.toUpperCase()
@@ -2428,7 +2460,9 @@ const faqs = [
                     class="h-auto w-full object-cover"
                   />
                 </div>
-                <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs text-rail-muted">
+                <div
+                  class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs text-rail-muted"
+                >
                   <div class="bg-rail-line/30 p-3">
                     <span class="block text-2xs uppercase tracking-caps">Westgard 1₃s Rule</span>
                     <span class="mt-1 block text-emerald-400 font-bold">PASSED</span>
@@ -2638,7 +2672,7 @@ const faqs = [
             </div>
             <div class="mt-auto flex flex-col gap-2 pt-4">
               <NuxtLink
-                :to="{ path: '/login', query: { demo: account.discipline } }"
+                :to="{ path: '/login', query: { demo: account.email } }"
                 class="border border-line-strong bg-raised px-3 py-2 text-center font-mono text-2xs uppercase tracking-wider text-ink hover:bg-canvas"
                 >Open live sandbox</NuxtLink
               >

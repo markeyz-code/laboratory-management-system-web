@@ -130,9 +130,7 @@ export default defineNuxtConfig({
   vite: {
     resolve: {
       alias: {
-        '@lims/shared': fileURLToPath(
-          new URL('./shared/src/index.ts', import.meta.url),
-        ),
+        '@lims/shared': fileURLToPath(new URL('./shared/src/index.ts', import.meta.url)),
       },
     },
   },
