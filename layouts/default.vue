@@ -63,7 +63,6 @@ const sections: NavSection[] = [
     label: 'Locate',
     items: [{ to: '/locator', label: 'Specimen locator', icon: 'search', capability: 'locator' }],
   },
-
 ];
 
 const visibleSections = computed(() =>
