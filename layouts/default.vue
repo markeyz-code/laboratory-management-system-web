@@ -57,46 +57,13 @@ const sections: NavSection[] = [
       { to: '/microbiology', label: 'Microbiology', icon: 'beaker', capability: 'microbiology' },
       { to: '/quality', label: 'Quality management', icon: 'shield', capability: 'quality' },
       { to: '/qa', label: 'QA review', icon: 'shield', capability: 'qa' },
-      { to: '/admin/billing', label: 'Billing', icon: 'billing', capability: 'billing' },
-    ],
-  },
-  {
-    label: 'Platform',
-    items: [
-      {
-        to: '/super-admin',
-        label: 'Organizations',
-        icon: 'external',
-        capability: 'platform',
-        exact: true,
-      },
     ],
   },
   {
     label: 'Locate',
     items: [{ to: '/locator', label: 'Specimen locator', icon: 'search', capability: 'locator' }],
   },
-  {
-    label: 'Administration',
-    items: [
-      { to: '/admin', label: 'Configuration', icon: 'settings', capability: 'admin', exact: true },
-      { to: '/admin/users', label: 'Staff', icon: 'users', capability: 'admin' },
-      {
-        to: '/admin/protocols',
-        label: 'Protocols',
-        icon: 'protocols',
-        capability: 'admin',
-        discipline: 'HISTOPATHOLOGY',
-      },
-      { to: '/admin/catalog', label: 'Test catalogue', icon: 'protocols', capability: 'admin' },
-      { to: '/admin/rules', label: 'Rules', icon: 'shield', capability: 'admin' },
-      { to: '/admin/inventory', label: 'Inventory', icon: 'beaker', capability: 'inventory' },
-      { to: '/admin/notifications', label: 'Message outbox', icon: 'send', capability: 'admin' },
-      { to: '/admin/integrations', label: 'Integrations', icon: 'external', capability: 'interop' },
-      { to: '/admin/settings', label: 'Lab settings', icon: 'settings', capability: 'admin' },
-      { to: '/admin/audit', label: 'Audit log', icon: 'audit', capability: 'audit' },
-    ],
-  },
+
 ];
 
 const visibleSections = computed(() =>

@@ -40,6 +40,7 @@ export default defineNuxtConfig({
       appName: process.env.NUXT_PUBLIC_APP_NAME || 'Laboratory LIMS',
       webBase: publicWebBase,
       cookieSecure,
+      homePath: process.env.NUXT_PUBLIC_HOME_PATH || '',
     },
   },
   app: {
