@@ -41,23 +41,8 @@ export default <Config>{
         },
       },
       fontFamily: {
-        sans: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'Roboto',
-          '"Helvetica Neue"',
-          'Arial',
-          'sans-serif',
-        ],
-        display: [
-          '"Iowan Old Style"',
-          '"Palatino Linotype"',
-          'Palatino',
-          '"Book Antiqua"',
-          'Georgia',
-          'serif',
-        ],
+        sans: ['Satoshi', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+        display: ['"Clash Display"', 'Satoshi', 'sans-serif'],
         mono: ['"SFMono-Regular"', 'Consolas', '"Liberation Mono"', 'Menlo', 'monospace'],
       },
       fontSize: {
@@ -68,10 +53,11 @@ export default <Config>{
       },
       borderRadius: {
         none: '0',
-        sm: '2px',
-        DEFAULT: '3px',
-        md: '4px',
-        lg: '4px',
+        sm: '6px',
+        DEFAULT: '8px',
+        md: '10px',
+        lg: '12px',
+        xl: '16px',
       },
       boxShadow: {
         none: 'none',

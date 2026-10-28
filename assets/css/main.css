@@ -2,46 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-Medium.ttf') format('truetype'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Clash Display'; src: url('/fonts/ClashDisplay-Medium.ttf') format('truetype'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Clash Display'; src: url('/fonts/ClashDisplay-Semibold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Clash Display'; src: url('/fonts/ClashDisplay-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+
+
 :root {
   color-scheme: light;
-  --canvas: 244 241 234;
-  --surface: 251 249 244;
-  --raised: 255 254 250;
-  --ink: 23 26 28;
-  --muted: 96 103 99;
-  --line: 213 207 195;
-  --line-strong: 178 171 157;
-  --accent: 184 57 29;
-  --accent-soft: 244 226 217;
+  --canvas: 255 255 255;
+  --surface: 255 255 255;
+  --raised: 249 250 251;
+  --ink: 11 27 23;
+  --muted: 102 112 133;
+  --line: 234 236 240;
+  --line-strong: 208 213 221;
+  --accent: 4 127 72;
+  --accent-soft: 232 247 240;
   --accent-ink: 255 255 255;
-  --success: 14 111 68;
-  --danger: 176 38 29;
-  --warning: 145 86 0;
-  --rail: 22 25 27;
-  --rail-ink: 245 242 235;
-  --rail-muted: 158 166 159;
-  --rail-line: 52 59 55;
+  --success: 18 183 106;
+  --danger: 217 45 32;
+  --warning: 181 71 8;
+  --rail: 14 78 63;
+  --rail-ink: 243 251 247;
+  --rail-muted: 149 203 180;
+  --rail-line: 30 102 82;
 }
 
 .dark {
   color-scheme: dark;
-  --canvas: 17 20 18;
-  --surface: 23 27 24;
-  --raised: 29 34 30;
-  --ink: 238 235 226;
-  --muted: 158 166 157;
-  --line: 48 56 50;
-  --line-strong: 72 82 74;
-  --accent: 255 111 71;
-  --accent-soft: 55 32 25;
-  --accent-ink: 18 21 18;
-  --success: 74 222 148;
+  --canvas: 9 24 19;
+  --surface: 14 28 22;
+  --raised: 20 37 29;
+  --ink: 240 245 242;
+  --muted: 152 162 179;
+  --line: 42 56 48;
+  --line-strong: 72 92 80;
+  --accent: 4 168 96;
+  --accent-soft: 20 61 45;
+  --accent-ink: 255 255 255;
+  --success: 18 183 106;
   --danger: 255 128 115;
   --warning: 240 179 90;
-  --rail: 10 12 11;
-  --rail-ink: 240 237 228;
-  --rail-muted: 148 157 150;
-  --rail-line: 42 49 44;
+  --rail: 6 28 21;
+  --rail-ink: 243 251 247;
+  --rail-muted: 149 203 180;
+  --rail-line: 30 72 57;
 }
 
 @layer base {
@@ -93,14 +100,14 @@
 
 @layer components {
   .display {
-    @apply font-display font-normal;
+    @apply font-display font-semibold;
     font-feature-settings: 'liga' 1;
     overflow-wrap: break-word;
     word-break: break-word;
   }
 
   .label-caps {
-    @apply font-mono text-2xs uppercase tracking-caps text-muted;
+    @apply font-display text-2xs font-medium uppercase tracking-caps text-muted;
   }
 
   .mono {
@@ -112,17 +119,17 @@
   }
 
   .panel {
-    @apply min-w-0 border border-line bg-surface;
+    @apply min-w-0 rounded-xl border border-line bg-surface;
   }
 
   .panel-raised {
-    @apply border border-line bg-raised shadow-panel;
+    @apply rounded-xl border border-line bg-raised shadow-panel;
   }
 
   .input,
   .select,
   .textarea {
-    @apply w-full border border-line-strong bg-raised px-3 py-2.5 text-sm text-ink transition-colors placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 disabled:cursor-not-allowed disabled:opacity-60;
+    @apply w-full rounded-lg border border-line-strong bg-raised px-3 py-2.5 text-sm text-ink transition-colors placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 disabled:cursor-not-allowed disabled:opacity-60;
   }
 
   .input-sm,
@@ -139,7 +146,7 @@
   }
 
   .btn {
-    @apply inline-flex select-none items-center justify-center gap-2 border px-4 py-2.5 font-mono text-2xs uppercase tracking-caps transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-lg border px-4 py-2.5 font-display text-xs font-semibold tracking-wide transition-colors disabled:cursor-not-allowed disabled:opacity-50;
   }
 
   .btn-primary {
